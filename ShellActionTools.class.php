@@ -177,35 +177,35 @@ class ShellActionTools {
     function debug() {
         fwrite(STDERR, "");
         if (count($this->input) > 0) {
-            fwrite(STDERR, "+------------------------------------------+");
-            fwrite(STDERR, "| Piped STDIN in Input:                    |");
-            fwrite(STDERR, "+------------------------------------------+");
+            fwrite(STDERR, "+------------------------------------------+\n");
+            fwrite(STDERR, "| Piped STDIN in Input:                    |\n");
+            fwrite(STDERR, "+------------------------------------------+\n");
             fwrite(STDERR, "");
-            fwrite(STDERR, $this->stdin);
+            fwrite(STDERR, $this->stdin . "\n");
             fwrite(STDERR, "");
-            fwrite(STDERR, "+------------------------------------------+");
-            fwrite(STDERR, "| Input STDIN as an ARRAY():               |");
-            fwrite(STDERR, "+------------------------------------------+");
+            fwrite(STDERR, "+------------------------------------------+\n");
+            fwrite(STDERR, "| Input STDIN as an ARRAY():               |\n");
+            fwrite(STDERR, "+------------------------------------------+\n");
             fwrite(STDERR, "");
-            foreach ($this->input as $k => $v) fwrite(STDERR, "$k => $v");
+            foreach ($this->input as $k => $v) fwrite(STDERR, "$k => $v \n");
         } else {
-            fwrite(STDERR, "+------------------------------------------+");
-            fwrite(STDERR, "| No STDIN:                                |");
-            fwrite(STDERR, "+------------------------------------------+");
+            fwrite(STDERR, "+------------------------------------------+\n");
+            fwrite(STDERR, "| No STDIN:                                |\n");
+            fwrite(STDERR, "+------------------------------------------+\n");
         }
 
         if (count($this->keys) > 0) {
-            fwrite(STDERR, "+------------------------------------------+");
-            fwrite(STDERR, "| Keys set by Automator 'Model Key' binds: |");
-            fwrite(STDERR, "+------------------------------------------+");
+            fwrite(STDERR, "+------------------------------------------+\n");
+            fwrite(STDERR, "| Keys set by Automator 'Model Key' binds: |\n");
+            fwrite(STDERR, "+------------------------------------------+\n");
             fwrite(STDERR, "");
-            foreach ($this->keys as $k => $v) fwrite(STDERR, "$k => $v \t". $this->env[$v]);
+            foreach ($this->keys as $k => $v) fwrite(STDERR, "$k => $v \t". $this->env[$v] . "\n");
         } else {
-            fwrite(STDERR, "+------------------------------------------+");
-            fwrite(STDERR, "| No Enviroment Variables from Action:     |");
-            fwrite(STDERR, "+------------------------------------------+");
+            fwrite(STDERR, "+------------------------------------------+\n");
+            fwrite(STDERR, "| No Enviroment Variables from Action:     |\n");
+            fwrite(STDERR, "+------------------------------------------+\n");
         }
-        fwrite(STDERR, "");
+        fwrite(STDERR, "\n");
     }
 
     /**

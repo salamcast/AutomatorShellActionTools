@@ -36,7 +36,7 @@ or like this
 > $> ls | arg="one" arg2="two" php main.command
 
 
-As you can see with the example above, you can use this class to help you process to types of input for a shell tool; but the main focus is building an Mac OS X Automator.app Action in XCode using shell scripting -- PHP in this case.  
+As you can see with the example above, you can use this class to help you process to types of input for a shell tool; but the main focus is building an Mac OS X Automator.app Action in XCode using shell scripting -- PHP in this case.  Use the debug.main.command.sh script to see the basics of this class in Action.
  
 **Ignored ENV keys**
 
