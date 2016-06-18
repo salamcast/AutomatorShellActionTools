@@ -2,8 +2,8 @@
 
 In my research into building Automator Actions with Shell Scripts (such as bash/sh/ksh), I notices that hasn't been much written about the subject.  So I have based my work on these urls:
 
- - [macosxautomation.com - Shell Script Action](https://macosxautomation.com/automator/shellacaction/index.html) 
- - [Apple Developer - Shell Script Action](https://developer.apple.com/library/mac/documentation/AppleApplications/Conceptual/AutomatorConcepts/Articles/ShellScriptActions.html)
+- [macosxautomation.com - Shell Script Action](https://macosxautomation.com/automator/shellacaction/index.html) 
+- [Apple Developer - Shell Script Action](https://developer.apple.com/library/mac/documentation/AppleApplications/Conceptual/AutomatorConcepts/Articles/ShellScriptActions.html)
 
 
 This is a small effort to show that PHP can be used in more places than just Websites; this class is aimed a processing command input and enviroment variables passes to the script from the prevous Automator Action.  Much like a pipe ( | ) when using the command line
