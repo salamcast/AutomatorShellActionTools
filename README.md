@@ -2,8 +2,8 @@
 
 In my research into building Automator Actions with Shell Scripts (such as bash/sh/ksh), I notices that hasn't been much written about the subject.  So I have based my work on these urls:
 
- - https://macosxautomation.com/automator/shellacaction/index.html
- - https://developer.apple.com/library/mac/documentation/AppleApplications/Conceptual/AutomatorConcepts/Articles/ShellScriptActions.html
+ - [macosxautomation.com - Shell Script Action](https://macosxautomation.com/automator/shellacaction/index.html) 
+ - [Apple Developer - Shell Script Action](https://developer.apple.com/library/mac/documentation/AppleApplications/Conceptual/AutomatorConcepts/Articles/ShellScriptActions.html)
 
 
 This is a small effort to show that PHP can be used in more places than just Websites; this class is aimed a processing command input and enviroment variables passes to the script from the prevous Automator Action.  Much like a pipe ( | ) when using the command line
@@ -14,26 +14,27 @@ This class will process the variables set and passed before the command (set as 
 #### Using the Code in main.command
 
 > \#!/usr/bin/php
+> 
 > <?php
 >
 > require 'ShellActionTools.class.php';
->
+> 
 > $s=new ShellActionTools();
->
+> 
 > echo "arg is: " . $s->arg . "\n";
 > echo "arg2 is " . $s->arg2 . "\n";
->
+> 
 > exit();
 
 #### Debuging Class on console
 
 
-> $> arg="one" arg2="two" php main.command < config-file
+> $ arg="one" arg2="two" php main.command < config-file
 
 
 or like this
 
-> $> ls | arg="one" arg2="two" php main.command
+> $ ls | arg="one" arg2="two" php main.command
 
 
 As you can see with the example above, you can use this class to help you process to types of input for a shell tool; but the main focus is building an Mac OS X Automator.app Action in XCode using shell scripting -- PHP in this case.  Use the debug.main.command.sh script to see the basics of this class in Action.
